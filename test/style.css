@@ -1,0 +1,563 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    background-color: #efefef;
+    font-family: 'Playfair Display', serif;
+}
+/* Start Header */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url(./images/background.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+nav{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+nav h1{
+    font-size: 30px;
+}
+nav h1 span{
+    color: limegreen;
+}
+nav .links{
+    padding-left: 0;
+}
+nav .links li{
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+nav .links li:hover{
+    color: limegreen;
+}
+header .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+header .content h1{
+    color: #fff;
+    font-size: 35px;
+    text-transform: capitalize;
+    position: relative;
+}
+header .content h1::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 10px;
+}
+header .content h1::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 10px;
+}
+header .content button{
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: transparent;
+    margin-top: 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+header .content button:hover{
+    background-color: limegreen;
+    color: #fff;
+    outline: none;
+    border: 0;
+}
+nav .open,
+nav .links .close{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:850px) {
+    nav .links{
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        z-index: 999;
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 1s linear;
+    }
+    nav .links li{
+        font-size: 30px;
+        margin: 30px;
+    }
+    nav .open,
+    nav .links .close{
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+}
+/* Start About Me */
+.about_me{
+    padding: 6%;
+}
+.about_me .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.about_me .content .text_box{
+    padding: 20px;
+    margin-left: 10px;
+}   
+.text_box h2{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.text_box p{
+    line-height: 1.7;
+}
+.about_me .about_pic .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info img{
+    flex-basis: 50%;
+}
+.info .hobbies{
+    flex-basis: 45%;
+    margin-left: 5%;
+    color: #333;
+}
+.hobbies h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+.hobbies p{
+    line-height: 1.7;
+    margin-bottom: 40px;
+}.hobbies .about_skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.about_skills a{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    color: limegreen;
+    text-decoration: none;
+}
+.about_skills a i{
+    font-size: 30px;
+    margin-right: 15px;
+}
+@media (max-width:850px) {
+    .about_me .content{
+        flex-direction: column;
+    }
+}
+@media (max-width:1100px) {
+    .about_me .about_pic .info{
+        flex-direction: column;
+        margin: 5%;
+    }
+    .hobbies h1{
+        font-size: 45px;
+        margin: 30px 0;
+    }
+}
+/* Start My skills */
+.my_skills{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: center;
+    color: #333;
+}
+.skills{
+    flex-basis: 50%;
+}
+.skills h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+.skills p{
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+.skills button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    color: limegreen;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.skills button:hover{
+    background-color: limegreen;
+    color: #fff;
+}
+.progress{
+    flex-basis: 45%;
+    margin-left: 5%;
+}
+.progress .prog{
+    margin: 30px 0;
+}
+.progress h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.prog div{
+    background-color: #ddd;
+    height: 25px;
+    margin-bottom: 20px;
+}
+.prog span{
+    background-color: limegreen;
+    height: 100%;
+    display: inline-block;
+    line-height: 25px;
+    text-align: right;
+    color: #fff;
+    font-weight: bold;
+}
+@media (max-width:850px) {
+    .my_skills{
+        flex-direction: column;
+    }
+    .skills h1{
+        font-size: 40px;
+    }
+    .progress{
+        margin-left: 0;
+    }
+}
+/* Start Resume */
+.resume{
+    background-color: #ddd;
+    text-align: center;
+    padding: 3%;
+    color: #333;
+}
+.resume h1{
+    font-size: 60px;
+}
+.resume p{
+    margin: 30px 10%;
+    line-height: 1.7;
+}
+.resume button{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    font-size: 25px;
+    color: limegreen;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.resume button:hover{
+    background-color: limegreen;
+    color: #fff;
+}
+/* Start My Education */
+.my_education{
+    display: flex;
+    justify-content: center;
+    padding: 6%;
+    color: #333;
+}
+.my_education .education{
+    flex-basis: 45%;
+    margin-right: 5%;
+}
+.degree{
+    flex-basis: 50%;
+}
+.education h1{
+    font-size: 60px;
+}
+.education p{
+    line-height: 1.7;
+    margin-top: 30px;
+}
+.degree_mark h3{
+    font-size: 30px;
+    margin-top: 30px;
+}
+.degree_mark p{
+    line-height: 1.7;
+    margin-top: 30px;
+}
+.degree_mark hr{
+    width: 50%;
+    margin-left: 0;
+}
+.degree_mark span{
+    display: inline-block;
+    background-color: limegreen;
+    color: #fff;
+    padding: 15px;
+    margin: 30px 0;
+}
+hr{
+    width: 90%;
+    margin: auto;
+}
+@media (max-width:850px) {
+    .my_education{
+        flex-direction: column;
+    }
+    .education h1{
+        font-size: 40px;
+    }
+    .degree{
+        margin-top: 30px;
+    }
+    .degree_mark h3{
+        font-size: 20px;
+    }
+}
+/* Start Testimonials */
+.testimonials{
+    background-color: #ddd;
+    text-align: center;
+    padding: 3%;
+    color: #333;
+}
+.testimonials q{
+    font-size: 30px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+.testimonials h1{
+    font-size: 30px;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+.testimonials ul li{
+    display: inline-block;
+    border: 5px solid limegreen;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.active{
+    background-color: limegreen;
+}
+/* Start Portfolio */
+.portfolio{
+    padding: 6%;
+    color: #333;
+    text-align: center;
+}
+.portfolio h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 2%;
+}
+.portfolio p{
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.portfolio_pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.portfolio_pic > img{
+    flex-basis: 30%;
+    margin: 15px;
+    box-shadow: 2px 2px 5px #000;
+}
+@media (max-width:850px) {
+    .portfolio h1{
+        font-size: 40px;
+    }
+}
+/* Start Connect Me */
+.connect_me{
+    padding: 6%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #252f31;
+    color: #ddd;
+}
+.left{
+    flex-basis: 40%;
+}
+.right{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.left h1{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.left p{
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+.left h3{
+    padding: 20px 0;
+}
+.left h3 span{
+    color: #fff;
+    font-size: 24px;
+}
+.right label{
+    padding: 20px 0;
+    font-size: 24px;
+    color: #fff;
+}
+.right input{
+    padding: 20px;
+}
+input:last-of-type{
+    width: 200px;
+    padding: 20px 40px;
+    margin-top: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media (max-width:1100px) {
+    .connect_me{
+        flex-direction: column;
+    }
+    .left h1{
+        font-size: 40px;
+    }
+}
+/* Start Footer */
+footer{
+    background-color: #000;
+    text-align: center;
+}
+footer h3{
+    color: #fff;
+    margin-bottom: 10px;
+}
+footer ul{
+    padding-left: 0;
+}
+footer ul li{
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+footer ul li i{
+    font-size: 30px;
+    color: limegreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
